@@ -2,7 +2,7 @@ const chalk = require('chalk');
 const moment = require('moment');
 
 class Logger {
-  constrcutor(appName) {
+  constructor(appName) {
     this.appName = (appName || '')
       .toUpperCase()
       .split(' ')
