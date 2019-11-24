@@ -1,7 +1,7 @@
 const chalk = require('chalk');
 const moment = require('moment');
 
-export class Logger {
+class Logger {
   constrcutor(appName) {
     this.appName = (appName || '')
       .toUpperCase()
@@ -21,3 +21,5 @@ export class Logger {
     console.log(chalk.blue(`[${this.appName}]`) + chalk.green(`[${dateString}]`) + `: ${message}`);
   }
 }
+
+module.exports = Logger;
