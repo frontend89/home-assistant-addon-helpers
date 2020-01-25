@@ -12,7 +12,7 @@ class Logger {
   log(message, vars) {
     const dateString = moment().format('DD/MM/YYYY HH:mm:ss');
 
-    if (typeof vars === 'string') {
+    if (['string', 'number'].includes(typeof vars)) {
       message += ' ' + chalk.blue(vars);
     } else if (Array.isArray(vars)) {
       message += ' ' + vars.map(p => chalk.blue(p)).join(' | ');
